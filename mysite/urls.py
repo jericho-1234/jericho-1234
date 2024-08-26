@@ -16,7 +16,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from reddit_bot.views import get_posts
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', get_posts, name='get_posts'),
 ]
