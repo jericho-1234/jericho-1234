@@ -16,9 +16,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from reddit_bot.views import get_posts
+from reddit_bot.views import get_posts_and_generate_response
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', get_posts, name='get_posts'),
+    path('', get_posts_and_generate_response, name='get_posts_and_generate_response'),
 ]
